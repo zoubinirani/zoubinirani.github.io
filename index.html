@@ -3,9 +3,9 @@ layout: default
 title: Blog | Zoubin Irani
 ---
 {% for post in site.posts %}
-<br>
 <div class="container">
   <h1>{{ post.title }}</h1>
+  {{ post.date }}
   {{ post.content }}
 </div>
 {% endfor %}
