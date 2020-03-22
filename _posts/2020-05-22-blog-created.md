@@ -3,11 +3,7 @@ layout: post
 title: "Blog Created"
 date: 2020-05-22
 ---
-<div class="post">
-
-  <p> Created my blog following Jonathan McGlone's [guide and template!](http://jmcglone.com/guides/github-pages/")</p> 
+Created my blog following Jonathan McGlone's [guide and template!](http://jmcglone.com/guides/github-pages/") 
   
-  <p>It is powered by Jekyll and Markdown.</p>
-
-</div>
+It is powered by Jekyll and Markdown.
 
