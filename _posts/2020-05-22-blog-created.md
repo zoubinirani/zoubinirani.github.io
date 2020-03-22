@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Blog Created"
+title: "Blog Created | Zoubin Irani"
 date: 2020-05-22
 ---
 Welcome!

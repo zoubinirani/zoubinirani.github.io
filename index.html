@@ -2,11 +2,10 @@
 layout: default
 title: Blog | Zoubin Irani
 ---
+
+{% for post in site.posts %}
 <div class="container">
-    <h1>Welcome to my blog.</h1>
-    <p>Hello everyone welcome to my blog. It's a work-in-progress but should be up and running soon.</p>
+  {{ post.title }}
+  {{ post.content }}
 </div>
-<div class = "container">
-  <p>Thank you Jonathan McGlone for the great GitHub Pages <a href="http://jmcglone.com/guides/github-pages/">guide and template!</a></p> 
-</div>
-  
+{% endfor %}
