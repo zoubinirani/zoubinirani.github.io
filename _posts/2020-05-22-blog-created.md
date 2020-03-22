@@ -11,8 +11,8 @@ It is powered by Jekyll and Markdown.
 
 A little bit about me, I am joining a startup as a software engineer in Toronto. Previously, I was an analytics consultant at a Canadian bank and a management consultant at a professional services firm.
 
-Special thanks to Jonathan McGlone's [guide and template!](http://jmcglone.com/guides/github-pages/"), it made the process of starting this blog much easier.
+You can contact me via email: [zoubinirani@gmail.com](mailto:zoubinirani@gmail.com).
 
-You can contact me via [email](mailto:zoubinirani@gmail.com)
+Special thanks to Jonathan McGlone's [guide and template!](http://jmcglone.com/guides/github-pages/"), it made the process of starting this blog much easier.
 
 
