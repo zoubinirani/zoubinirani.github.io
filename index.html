@@ -2,10 +2,10 @@
 layout: default
 title: Blog | Zoubin Irani
 ---
-
 {% for post in site.posts %}
+<br>
 <div class="container">
-  {{ post.title }}
+  <h1>{{ post.title }}</h1>
   {{ post.content }}
 </div>
 {% endfor %}
