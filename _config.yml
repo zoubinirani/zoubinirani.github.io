@@ -1,0 +1,22 @@
+title: Zoubin Irani
+email: zoubinirani@gmail.com
+description: >-
+  Software, data, and whatever else I'm currently figuring out.
+baseurl: ""
+url: "https://www.zoubinirani.com"
+twitter_username:
+github_username: zoubinirani
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Markdown & syntax highlighting
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Permalink style
+permalink: /writing/:year/:month/:day/:title/

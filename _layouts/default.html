@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      {% include sidebar.html %}
+    </aside>
+    <main class="content">
+      {{ content }}
+      <footer class="site-footer">
+        <p>Code snippets are <a href="{{ '/LICENSE' | relative_url }}">MIT licensed</a>. Words are licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>.</p>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Built with <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+      </footer>
+    </main>
+  </div>
+  <script>
+    // Mobile hamburger toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      var toggle = document.querySelector('.sidebar-toggle');
+      var sidebar = document.querySelector('.sidebar');
+      if (toggle) {
+        toggle.addEventListener('click', function() {
+          sidebar.classList.toggle('open');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
