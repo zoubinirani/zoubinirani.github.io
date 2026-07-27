@@ -293,18 +293,49 @@ hr {
 }
 
 /* ========== Tags Page ========== */
+.tag-groups {
+  margin-top: 1rem;
+}
+
 .tag-group {
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .tag-anchor {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   color: #111;
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid #1a73e8;
-  display: inline-block;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  user-select: none;
+}
+
+.tag-anchor::-webkit-details-marker {
+  display: none;
+}
+
+.tag-anchor::before {
+  content: '+';
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #888;
+  width: 1.2rem;
+  text-align: center;
+  transition: transform 0.15s;
+}
+
+details[open] .tag-anchor::before {
+  content: '−';
+  color: #1a73e8;
+}
+
+.tag-anchor:hover {
+  color: #1a73e8;
 }
 
 .tag-posts {

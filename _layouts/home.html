@@ -28,6 +28,15 @@ layout: default
       {{ featured_post.content }}
     </div>
   </article>
+
+  <nav class="post-nav">
+    {% if featured_post.previous.url %}
+      <a class="post-nav-prev" href="{{ featured_post.previous.url | relative_url }}">&larr; {{ featured_post.previous.title }}</a>
+    {% endif %}
+    {% if featured_post.next.url %}
+      <a class="post-nav-next" href="{{ featured_post.next.url | relative_url }}">{{ featured_post.next.title }} &rarr;</a>
+    {% endif %}
+  </nav>
 {% else %}
   <div class="empty-state">
     <p>No posts yet. Check back soon!</p>

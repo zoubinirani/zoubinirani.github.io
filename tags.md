@@ -6,11 +6,12 @@ permalink: /tags/
 
 {% assign sorted_tags = site.tags | sort %}
 
+<div class="tag-groups">
 {% for tag in sorted_tags %}
   {% assign tag_name = tag[0] %}
   {% assign posts = tag[1] %}
-  <div class="tag-group">
-    <h2 class="tag-anchor" id="{{ tag_name | slugify }}">{{ tag_name }}</h2>
+  <details class="tag-group" id="{{ tag_name | slugify }}">
+    <summary class="tag-anchor">{{ tag_name }} ({{ posts.size }})</summary>
     <ul class="tag-posts">
       {% for post in posts %}
         <li>
@@ -19,5 +20,6 @@ permalink: /tags/
         </li>
       {% endfor %}
     </ul>
-  </div>
+  </details>
 {% endfor %}
+</div>
