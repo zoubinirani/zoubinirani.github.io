@@ -24,11 +24,9 @@ layout: default
       {% endif %}
     </header>
 
-    <div class="post-excerpt">
-      {{ featured_post.excerpt }}
+    <div class="post-content">
+      {{ featured_post.content }}
     </div>
-
-    <a href="{{ featured_post.url | relative_url }}" class="read-more">Continue reading →</a>
   </article>
 {% else %}
   <div class="empty-state">

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Creating this blog cost $0.10"
-date: 2026-07-26 00:00:00 -0400
+date: 2026-07-26 18:00:00 -0400
 tags: [llm, blogging, deepseek, cost]
 ---
 
