@@ -2,7 +2,7 @@
 layout: post
 title: "Creating this blog cost $0.10"
 date: 2026-07-26 18:00:00 -0400
-tags: [llm, blogging, deepseek, cost]
+tags: [llm, ai, blogging, deepseek, cost]
 ---
 
 LLMs are not just *good*, they are surprisingly *cheap* and *easy to use*.

@@ -14,11 +14,13 @@ permalink: /writing/
         <time datetime="{{ post.date | date_to_xmlschema }}">
           {{ post.date | date: "%B %-d, %Y" }}
         </time>
+        {% include reading-time.html source=post.content %}
       </div>
       {% if post.tags %}
       <div class="post-tags">
         {% for tag in post.tags %}
-          <a href="{{ '/tags/#' | append: tag | slugify | relative_url }}" class="tag-badge">{{ tag }}</a>
+          {% assign tag_slug = tag | downcase | slugify %}
+          <a href="{{ '/tags/#' | append: tag_slug | relative_url }}" class="tag-badge">{{ tag | downcase }}</a>
         {% endfor %}
       </div>
       {% endif %}

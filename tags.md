@@ -4,14 +4,22 @@ title: Tags
 permalink: /tags/
 ---
 
-{% assign sorted_tags = site.tags | sort %}
+{% capture tag_list %}
+{% for tag in site.tags %}
+{{ tag[1] | size | times: -1 | plus: 9999 | prepend: '0000' | slice: -4, 4 }}|{{ tag[0] }}
+{% endfor %}
+{% endcapture %}
+{% assign sorted_tags = tag_list | strip | split: "
+" | sort %}
 
 <div class="tag-groups">
 {% for tag in sorted_tags %}
-  {% assign tag_name = tag[0] %}
-  {% assign posts = tag[1] %}
+  {% if tag == "" %}{% continue %}{% endif %}
+  {% assign tag_bits = tag | split: "|" %}
+  {% assign tag_name = tag_bits[1] %}
+  {% assign posts = site.tags[tag_name] %}
   <details class="tag-group" id="{{ tag_name | slugify }}">
-    <summary class="tag-anchor">{{ tag_name }} ({{ posts.size }})</summary>
+    <summary class="tag-anchor">{{ tag_name | downcase }} ({{ posts.size }})</summary>
     <ul class="tag-posts">
       {% for post in posts %}
         <li>

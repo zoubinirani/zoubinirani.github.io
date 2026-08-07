@@ -9,11 +9,13 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}">
         {{ page.date | date: "%B %-d, %Y" }}
       </time>
+      {% include reading-time.html source=page.content %}
     </div>
     {% if page.tags %}
     <div class="post-tags">
       {% for tag in page.tags %}
-        <a href="{{ '/tags/#' | append: tag | slugify | relative_url }}" class="tag-badge">{{ tag }}</a>
+        {% assign tag_slug = tag | downcase | slugify %}
+        <a href="{{ '/tags/#' | append: tag_slug | relative_url }}" class="tag-badge">{{ tag | downcase }}</a>
       {% endfor %}
     </div>
     {% endif %}
