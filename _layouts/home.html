@@ -26,9 +26,10 @@ layout: default
       {% endif %}
     </header>
 
-    <div class="post-content">
-      {{ featured_post.content }}
+    <div class="post-excerpt">
+      {{ featured_post.excerpt }}
     </div>
+    <a href="{{ featured_post.url | relative_url }}" class="read-more">Continue reading →</a>
   </article>
 
   <nav class="post-nav">
